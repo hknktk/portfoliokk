@@ -8,12 +8,11 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  font-family: 'Sawarabi Mincho', sans-serif;
+  font-family: "Sawarabi Mincho", sans-serif;
 }
 
 body {
   overflow-x: hidden;
-  background-color: #082950;
 }
 
 a {
@@ -26,7 +25,7 @@ a {
   top: 5px;
   width: 45px;
   height: 45px;
-  background-color: #f0ebeb;
+  background-color: #fff;
   z-index: 100;
   cursor: pointer;
 }
@@ -53,11 +52,11 @@ a {
   left: 25%;
   width: 50%;
   height: 3px;
-  background-color: #1d1b1b;
-  -webkit-transition: opacity .3s ,-webkit-transform 1s;
-  transition: opacity .3s ,-webkit-transform 1s;
-  transition: transform 1s ,opacity .3s;
-  transition: transform 1s ,opacity .3s ,-webkit-transform 1s;
+  background-color: #1a1919;
+  -webkit-transition: opacity 0.3s, -webkit-transform 1s;
+  transition: opacity 0.3s, -webkit-transform 1s;
+  transition: transform 1s, opacity 0.3s;
+  transition: transform 1s, opacity 0.3s, -webkit-transform 1s;
 }
 
 .menu__button--bar:first-of-type {
@@ -76,12 +75,12 @@ a {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #082950;
+  background-color: #96cee7;
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .6s;
-  transition: opacity .6s;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
 }
 
 .menu.show {
@@ -145,7 +144,7 @@ a {
 
 .menu ul li a {
   color: #fff;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 4rem;
 }
 
@@ -159,38 +158,48 @@ header {
   position: absolute;
   top: 2px;
   left: 10px;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 4.5rem;
   font-weight: 600;
   padding: 8px;
-  color: #fff;
+  color: #252424;
 }
 
 .main__title span {
+  display: inline-block;
   font-weight: 900;
-  -webkit-animation: whiteToBlue 3s forwards;
-          animation: whiteToBlue 3s forwards;
+  color: #96cee7;
+  -webkit-animation: upToDown 1s forwards;
+          animation: upToDown 1s forwards;
 }
 
-@-webkit-keyframes whiteToBlue {
+@-webkit-keyframes upToDown {
   0% {
-    color: #fff;
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   100% {
-    color: #96cee7;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
-@keyframes whiteToBlue {
+@keyframes upToDown {
   0% {
-    color: #fff;
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   100% {
-    color: #96cee7;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
-.swiper-container {
+.hero__img {
   position: relative;
   top: 70px;
   width: 100%;
@@ -198,43 +207,64 @@ header {
   margin-bottom: 80px;
 }
 
-.swiper-container .sub__title {
+.hero__img .sub__title {
   position: absolute;
   bottom: 50px;
   left: 5%;
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 6rem;
+  letter-spacing: 1px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 5rem;
   font-weight: 800;
-  color: #bbc8cf;
+  color: white;
   z-index: 3;
 }
 
-.swiper-container .sub__title span {
+.hero__img .sub__title span {
   padding: 16px;
-  text-shadow: 3px 3px 1px #0b5775;
 }
 
-.swiper-wrapper {
+.hero__img--inner {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide img {
+.hero__img--inner img {
   width: 100%;
   height: 100%;
 }
 
 .container {
   padding-top: 24px;
+  min-height: 300vh;
 }
 
 .block:nth-of-type(1) .block__title::before {
   content: "About";
+}
+
+.block:nth-of-type(2) .block__title::before {
+  content: "Skill";
+}
+
+.block:nth-of-type(3) .block__title::before {
+  content: "Idea";
+}
+
+.block {
+  width: 100%;
+  height: 500px;
+  padding: 8px 0px;
+}
+
+.block__title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 64px;
+  font-family: "Fira Sans", sans-serif;
+  color: #f2f6f8;
+}
+
+.block__title::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -245,76 +275,62 @@ header {
   color: #8a8787;
 }
 
-.block {
-  width: 100%;
-  min-height: 100vh;
-  padding: 8px;
-}
-
-.block__title {
-  position: relative;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 64px;
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 900;
-  color: #f2f6f8;
-}
-
 .block__title::after {
   content: "";
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: -30px;
+  bottom: -40px;
   width: 30px;
   height: 5px;
-  background-color: #ee6911;
+  background-color: #96cee7;
 }
 
 .box {
   position: relative;
   width: 100%;
-  margin: 0 auto;
-  height: 100%;
+  height: 350px;
+  background-size: cover;
 }
 
-.box img {
-  width: 100%;
-  height: 500px;
-}
-
-.box ul {
-  padding: 8px;
+.box__title {
   position: absolute;
-  top: 30px;
+  right: 10%;
+  top: 60%;
+  color: #fff;
+  font-size: 4rem;
 }
 
-.box ul li {
-  display: inline-block;
+.box__detail {
+  position: absolute;
+  right: 10%;
+  top: 75%;
+  color: #fff;
   font-size: 1.7rem;
-  line-height: 1.4;
-  margin-bottom: 16px;
+  font-weight: 800;
   padding: 8px;
-  color: #0f92dd;
+  border: 3px solid #fff;
 }
 
-.box ul li:first-of-type span {
-  position: relative;
-  color: #fff;
-  font-size: 2.4rem;
+.box__detail::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f138";
+  margin-left: 6px;
 }
 
-.box ul li:not(:first-child)::before {
-  content: "#";
+.first__box {
+  background-image: url(./images/img2.png);
 }
 
-.box ul li span {
-  padding: 0px 4px;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
+.second__box {
+  background-image: url(./images/img3.png);
+}
+
+.third__box {
+  background-image: url(./images/img4.png);
 }
 
 .under-line__anime::after {
