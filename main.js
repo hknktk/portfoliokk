@@ -2,23 +2,35 @@ const menuButton = document.querySelector('.js-menu__button');
 const menu = document.querySelector('.js-menu');
 const menuList = document.querySelector('.js-menu__list');
 
-function menuFunction(el,cb){
+function toggleActive(el,target){
   el.addEventListener('click',() =>{
-    cb();
+    target.classList.toggle('active');
   })
 }
 
-menuFunction(menuButton,menuOpenClose);
-menuFunction(menuList,menuOpenClose);
+toggleActive(menuButton,menu);
+toggleActive(menuList,menu);
+
+toggleActive(menuButton,menuButton);
+toggleActive(menuList,menuButton);
 
 
-
-
-
-function menuOpenClose(){
-  menuButton.classList.toggle('active');
-  menu.classList.toggle('show');
+function addActive(el){
+  el.classList.add('active');
 }
+
+const detail_buttons = document.querySelectorAll('.js-detail__button');
+
+
+
+detail_buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    let button_parent = button.parentElement;
+    let detail_box = button_parent.nextElementSibling;
+    addActive(detail_box);
+  })
+})
+
 
 
 // // テキストアニメーション

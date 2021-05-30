@@ -18,9 +18,9 @@
 
   <div class="menu js-menu">
     <ul class="menu__list js-menu__list">
-      <li><a href="">First Block</a></li>
-      <li><a href="">Second Block</a></li>
-      <li><a href="">Third Block</a></li>
+      <li><a href="#">First Block</a></li>
+      <li><a href="#">Second Block</a></li>
+      <li><a href="#">Third Block</a></li>
     </ul>
   </div>
 
@@ -42,27 +42,67 @@
     <div class="container">
 
     <div class="block first__block">
-      <h2 class="block__title" id="about"></h2>
-      <div class="box first__box">
+      <h2 class="block__title" id="about">私について</h2>
+      <div class="img__box first__box">
         <h3 class="box__title">自己紹介</h3>
-        <p class="box__detail">プロフィールを表示</p>
+        <p class="js-detail__button"><a href="#about-title">プロフィールはこちら</a></p>
       </div>
+
+      <div class="detail__box">
+        <h3 class="detail__box--title" id="about-title"><span>About</span></h3>
+
+        <table class="detail__box--inner">
+          <tr>
+            <td>2000/02</td>
+            <td><span class="under-line__anime">東京都</span>で生まれる</td>
+          </tr>
+
+          <tr>
+            <td>2005</td>
+            <td>5歳で<span class="under-line__anime">野球</span>を始める</td>
+          </tr>
+
+          <tr>
+            <td>2017/07</td>
+            <td>高校3年、12年続けた野球を引退</td>
+          </tr>
+
+          <tr>
+            <td>2018/04</td>
+            <td><span class="under-line__anime">学習院大学経済学部</span>に入学</td>
+          </tr>
+
+          <tr>
+            <td>2020/12</td>
+            <td><span class="under-line__anime">独学</span>で<span class="under-line__anime">Web制作</span>の学習をスタート</td>
+          </tr>
+
+        </table>
+
     </div>
 
     <div class="block second__block">
-      <h2 class="block__title" id="about"></h2>
-      <div class="box second__box">
+      <h2 class="block__title" id="about">スキルについて</h2>
+      <div class="img__box second__box">
         <h3 class="box__title">スキル</h3>
-        <p class="box__detail">過去の制作物を表示</p>
+        <p class="js-detail__button"><a href="#skill-title">過去の制作物はこちら</a></p>
+      </div>
+
+      <div class="detail__box">
+        <h3 class="detail__box--title" id="skill-title"></h3>
       </div>
     </div>
 
     <div class="block third__block">
-      <h2 class="block__title" id="about"></h2>
-      <div class="box third__box">
+      <h2 class="block__title" id="about">仕事観について</h2>
+      <div class="img__box third__box">
         <h3 class="box__title">仕事観</h3>
-        <p class="box__detail">仕事へのこだわりを表示</p>
+        <p class="js-detail__button">私のこだわりはこちら</p>
       </div>
+
+      <div class="detail__box"></div>
+
+
     </div>
 
 
@@ -73,7 +113,6 @@
   </main>
 
   <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="slider.js"></script>
   <script src="scrool.js"></script>
   <script src="main.js"></script>
 </body>

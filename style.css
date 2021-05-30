@@ -17,6 +17,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 .menu__button {
@@ -83,38 +84,38 @@ a {
   transition: opacity 0.6s;
 }
 
-.menu.show {
+.menu.active {
   opacity: 1;
   visibility: visible;
 }
 
-.menu.show ul li {
+.menu.active ul li {
   opacity: 1;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
 }
 
-.menu.show ul li:nth-child(1) {
+.menu.active ul li:nth-child(1) {
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.menu.show ul li:nth-child(2) {
+.menu.active ul li:nth-child(2) {
   -webkit-transition: 2s;
   transition: 2s;
 }
 
-.menu.show ul li:nth-child(3) {
+.menu.active ul li:nth-child(3) {
   -webkit-transition: 3s;
   transition: 3s;
 }
 
-.menu.show ul li:nth-child(4) {
+.menu.active ul li:nth-child(4) {
   -webkit-transition: 4s;
   transition: 4s;
 }
 
-.menu.show ul li:nth-child(5) {
+.menu.active ul li:nth-child(5) {
   -webkit-transition: 5s;
   transition: 5s;
 }
@@ -210,13 +211,12 @@ header {
 .hero__img .sub__title {
   position: absolute;
   bottom: 50px;
-  left: 5%;
+  left: 5px;
   letter-spacing: 1px;
   font-family: "Fira Sans", sans-serif;
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 800;
   color: white;
-  z-index: 3;
 }
 
 .hero__img .sub__title span {
@@ -252,27 +252,32 @@ header {
 
 .block {
   width: 100%;
-  height: 500px;
+  min-height: 200px;
   padding: 8px 0px;
+  padding-top: 64px;
+  margin-bottom: 80px;
 }
 
 .block__title {
   position: relative;
   text-align: center;
+  font-size: 3.5rem;
   margin-bottom: 64px;
   font-family: "Fira Sans", sans-serif;
-  color: #f2f6f8;
+  font-weight: 800;
+  color: #333;
+  opacity: 1;
 }
 
 .block__title::before {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  opacity: 0.4;
+  opacity: 0.2;
   font-size: 8rem;
-  color: #8a8787;
+  color: #f88c61;
 }
 
 .block__title::after {
@@ -281,13 +286,13 @@ header {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: -40px;
+  bottom: -20px;
   width: 30px;
   height: 5px;
   background-color: #96cee7;
 }
 
-.box {
+.img__box {
   position: relative;
   width: 100%;
   height: 350px;
@@ -300,9 +305,10 @@ header {
   top: 60%;
   color: #fff;
   font-size: 4rem;
+  font-weight: 800;
 }
 
-.box__detail {
+.js-detail__button {
   position: absolute;
   right: 10%;
   top: 75%;
@@ -310,10 +316,10 @@ header {
   font-size: 1.7rem;
   font-weight: 800;
   padding: 8px;
-  border: 3px solid #fff;
+  background-color: #0c658f;
 }
 
-.box__detail::after {
+.js-detail__button::after {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -333,6 +339,82 @@ header {
   background-image: url(./images/img4.png);
 }
 
+.detail__box {
+  width: 100%;
+  background-color: #eb9d6a;
+  overflow: hidden;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  min-height: 200px;
+  padding-top: 16px;
+}
+
+.detail__box.active {
+  padding-top: 16px;
+  min-height: 200px;
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 96px;
+}
+
+.detail__box--title span {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  padding: 8px;
+  margin-bottom: 40px;
+}
+
+.detail__box--title span::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #96cee7;
+}
+
+.detail__box--inner {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.detail__box--inner tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.detail__box--inner tr td:nth-of-type(1) {
+  display: block;
+  min-width: 30%;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.detail__box--inner tr td:nth-of-type(2) {
+  display: block;
+  width: 100%;
+  padding-left: 8px;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.detail__box--inner tr td:nth-of-type(2) span {
+  position: relative;
+  padding: 0px 4px;
+  font-weight: 800;
+}
+
 .under-line__anime::after {
   content: "";
   position: absolute;
@@ -340,7 +422,7 @@ header {
   bottom: 0;
   height: 3px;
   width: 0%;
-  background-color: #ee6911;
+  background-color: #96cee7;
   -webkit-transition: 1s;
   transition: 1s;
 }
