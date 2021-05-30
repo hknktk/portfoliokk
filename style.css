@@ -152,6 +152,7 @@ a {
 header {
   position: relative;
   min-height: 400px;
+  margin-bottom: 96px;
 }
 
 .main__title {
@@ -159,7 +160,7 @@ header {
   top: 2px;
   left: 10px;
   font-family: 'Fira Sans', sans-serif;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 600;
   padding: 8px;
   color: #fff;
@@ -191,7 +192,7 @@ header {
 
 .swiper-container {
   position: relative;
-  top: 55px;
+  top: 70px;
   width: 100%;
   height: 350px;
   margin-bottom: 80px;
@@ -200,11 +201,11 @@ header {
 .swiper-container .sub__title {
   position: absolute;
   bottom: 50px;
-  left: 20%;
+  left: 5%;
   font-family: 'Fira Sans', sans-serif;
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 800;
-  color: #8eccf1;
+  color: #bbc8cf;
   z-index: 3;
 }
 
@@ -232,6 +233,18 @@ header {
   padding-top: 24px;
 }
 
+.block:nth-of-type(1) .block__title::before {
+  content: "About";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.4;
+  font-size: 8rem;
+  color: #8a8787;
+}
+
 .block {
   width: 100%;
   min-height: 100vh;
@@ -242,9 +255,10 @@ header {
   position: relative;
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   font-family: 'Fira Sans', sans-serif;
-  color: #fff;
+  font-weight: 900;
+  color: #f2f6f8;
 }
 
 .block__title::after {
@@ -253,8 +267,8 @@ header {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: -10px;
-  width: 40px;
+  bottom: -30px;
+  width: 30px;
   height: 5px;
   background-color: #ee6911;
 }
@@ -308,9 +322,9 @@ header {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 1px;
-  width: 20%;
-  background-color: #fff;
+  height: 3px;
+  width: 0%;
+  background-color: #ee6911;
   -webkit-transition: 1s;
   transition: 1s;
 }
