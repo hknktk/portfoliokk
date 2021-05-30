@@ -1,18 +1,28 @@
 const menuButton = document.querySelector('.js-menu__button');
 const menu = document.querySelector('.js-menu');
-const menuList = document.querySelector('.js-menu__list');
+const menuLists = document.querySelectorAll('.js-menu__list');
 
-function toggleActive(el,target){
-  el.addEventListener('click',() =>{
+function menuOnOff(target){
+  menuButton.addEventListener('click',() => {
     target.classList.toggle('active');
   })
 }
 
-toggleActive(menuButton,menu);
-toggleActive(menuList,menu);
+menuOnOff(menu);
+menuOnOff(menuButton);
 
-toggleActive(menuButton,menuButton);
-toggleActive(menuList,menuButton);
+function toggleActive(el){
+  el.classList.toggle('active');
+}
+
+menuLists.forEach(list =>{
+  list.addEventListener('click', () => {
+    toggleActive(menu);
+    toggleActive(menuButton);
+  })
+})
+
+
 
 
 function addActive(el){
@@ -30,6 +40,16 @@ detail_buttons.forEach(button => {
     addActive(detail_box);
   })
 })
+
+const close_buttons = document.querySelectorAll('.js-close__button');
+
+close_buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    let button_parent = button.parentElement;
+    toggleActive(button_parent);
+  })
+})
+
 
 
 

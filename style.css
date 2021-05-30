@@ -160,7 +160,7 @@ header {
   top: 2px;
   left: 10px;
   font-family: "Fira Sans", sans-serif;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 600;
   padding: 8px;
   color: #252424;
@@ -235,52 +235,27 @@ header {
 
 .container {
   padding-top: 24px;
-  min-height: 300vh;
+  min-height: 100vh;
 }
 
-.block:nth-of-type(1) .block__title::before {
+.block:nth-of-type(1) .box__title::before {
   content: "About";
 }
 
-.block:nth-of-type(2) .block__title::before {
+.block:nth-of-type(2) .box__title::before {
   content: "Skill";
 }
 
-.block:nth-of-type(3) .block__title::before {
+.block:nth-of-type(3) .box__title::before {
   content: "Idea";
 }
 
 .block {
   width: 100%;
-  min-height: 200px;
-  padding: 8px 0px;
-  padding-top: 64px;
-  margin-bottom: 80px;
+  padding: 16px 0px;
 }
 
-.block__title {
-  position: relative;
-  text-align: center;
-  font-size: 3.5rem;
-  margin-bottom: 64px;
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 800;
-  color: #333;
-  opacity: 1;
-}
-
-.block__title::before {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0.2;
-  font-size: 8rem;
-  color: #f88c61;
-}
-
-.block__title::after {
+.block::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -304,8 +279,20 @@ header {
   right: 10%;
   top: 60%;
   color: #fff;
+  color: #96cee7;
   font-size: 4rem;
   font-weight: 800;
+}
+
+.box__title::before {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.3;
+  font-size: 8rem;
+  color: #eb9d6a;
 }
 
 .js-detail__button {
@@ -340,21 +327,47 @@ header {
 }
 
 .detail__box {
+  position: relative;
   width: 100%;
-  background-color: #eb9d6a;
-  overflow: hidden;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  min-height: 200px;
-  padding-top: 16px;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 
 .detail__box.active {
+  background-color: #eb9d6a;
+  height: auto;
+  padding: 8px;
   padding-top: 16px;
   min-height: 200px;
   opacity: 1;
   visibility: visible;
   margin-bottom: 96px;
+}
+
+.detail__box .close__button {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.detail__box .close__button .close__sign {
+  font-size: 2.5rem;
 }
 
 .detail__box--title span {
@@ -378,7 +391,7 @@ header {
   top: 0;
   height: 100%;
   width: 3px;
-  background-color: #96cee7;
+  background-color: #fff;
 }
 
 .detail__box--inner {
@@ -423,8 +436,8 @@ header {
   height: 3px;
   width: 0%;
   background-color: #96cee7;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .under-line__anime.inview::after {

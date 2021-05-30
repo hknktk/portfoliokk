@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <title>LP練習</title>
+  <title>ポートフォリオ</title>
 </head>
 <body>
   <nav class="menu__button js-menu__button">
@@ -17,16 +17,16 @@
   </nav>
 
   <div class="menu js-menu">
-    <ul class="menu__list js-menu__list">
-      <li><a href="#">First Block</a></li>
-      <li><a href="#">Second Block</a></li>
-      <li><a href="#">Third Block</a></li>
+    <ul class="menu__list">
+      <li class="js-menu__list"><a href="#about__block">First Block</a></li>
+      <li class="js-menu__list"><a href="#skill__block">Second Block</a></li>
+      <li class="js-menu__list"><a href="#idea__block">Third Block</a></li>
     </ul>
   </div>
 
   <header>
 
-    <h1 class="main__title"><span>K</span>UDOH<span>K</span>EITA</h1>
+    <h1 class="main__title"><span>K</span>KKKK <span>K</span>KKKK</h1>
 
     <div class="hero__img">
       <div class="hero__img--inner"><img src="./images/img1.png" alt=""></div>
@@ -41,15 +41,16 @@
   <main>
     <div class="container">
 
-    <div class="block first__block">
-      <h2 class="block__title" id="about">私について</h2>
+    <div class="block first__block" id="about__block">
       <div class="img__box first__box">
         <h3 class="box__title">自己紹介</h3>
-        <p class="js-detail__button"><a href="#about-title">プロフィールはこちら</a></p>
+        <p class="js-detail__button"><a href="#about__box">プロフィールはこちら</a></p>
       </div>
 
-      <div class="detail__box">
-        <h3 class="detail__box--title" id="about-title"><span>About</span></h3>
+      <div class="detail__box" id="about__box">
+        <h3 class="detail__box--title" ><span>About</span></h3>
+
+        <span class="close__button js-close__button"><i class="far fa-times-circle close__sign"></i></span>
 
         <table class="detail__box--inner">
           <tr>
@@ -69,7 +70,7 @@
 
           <tr>
             <td>2018/04</td>
-            <td><span class="under-line__anime">学習院大学経済学部</span>に入学</td>
+            <td><span class="under-line__anime">○○○大学経済学部</span>に入学</td>
           </tr>
 
           <tr>
@@ -79,28 +80,43 @@
 
         </table>
 
+      </div>
     </div>
-
-    <div class="block second__block">
-      <h2 class="block__title" id="about">スキルについて</h2>
+      
+    <div class="block second__block" id="skill__block">
       <div class="img__box second__box">
         <h3 class="box__title">スキル</h3>
-        <p class="js-detail__button"><a href="#skill-title">過去の制作物はこちら</a></p>
+        <p class="js-detail__button"><a href="#skill__title">過去の制作物はこちら</a></p>
       </div>
 
       <div class="detail__box">
-        <h3 class="detail__box--title" id="skill-title"></h3>
+        <h3 class="detail__box--title" id="skill__title"></h3>
+
+
+        <span class="close__button js-close__button"><i class="far fa-times-circle close__sign"></i></span>
+
+
       </div>
+
+      
+
+
     </div>
 
-    <div class="block third__block">
-      <h2 class="block__title" id="about">仕事観について</h2>
+    <div class="block third__block"  id="skill__block">
       <div class="img__box third__box">
         <h3 class="box__title">仕事観</h3>
-        <p class="js-detail__button">私のこだわりはこちら</p>
+        <p class="js-detail__button"><a href="#idea__title"></a>私のこだわりはこちら</p>
       </div>
 
-      <div class="detail__box"></div>
+      <div class="detail__box">
+        <h3 class="detail__box--title" id="idea__title"></h3>
+
+        
+        <span class="close__button js-close__button"><i class="far fa-times-circle close__sign"></i></span>
+
+
+      </div>
 
 
     </div>
@@ -109,7 +125,6 @@
 
 
 
-    </div>
   </main>
 
   <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
