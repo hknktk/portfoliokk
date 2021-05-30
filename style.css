@@ -255,18 +255,6 @@ header {
   padding: 16px 0px;
 }
 
-.block::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: -20px;
-  width: 30px;
-  height: 5px;
-  background-color: #96cee7;
-}
-
 .img__box {
   position: relative;
   width: 100%;
