@@ -11,10 +11,6 @@ html {
   font-family: "Sawarabi Mincho", sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 a {
   text-decoration: none;
   color: #fff;
@@ -252,6 +248,7 @@ header {
 
 .block {
   width: 100%;
+  min-height: 200px;
   padding: 16px 0px;
 }
 
